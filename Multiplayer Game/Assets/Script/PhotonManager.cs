@@ -13,15 +13,16 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public TMP_InputField userNameText;
     public TMP_InputField roomNameText;
     public TMP_InputField maxPlayer;
+
     public GameObject PlayerNamePanel;
     public GameObject LobbyPanel;
     public GameObject RoomCreatePanel;
     public GameObject ConnectingPanel;
     public GameObject RoomListPanel;
-
-    private Dictionary <string , RoomInfo> roomListData;
     public GameObject roomListPrefab;
     public GameObject roomListParent;
+
+    private Dictionary <string , RoomInfo> roomListData;
     private Dictionary<string, GameObject> roomListGameobject;
     private Dictionary<int, GameObject> playerListGameobject;
     
@@ -344,8 +345,6 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         ConnectingPanel.SetActive(panelName.Equals(ConnectingPanel.name));
         RoomListPanel.SetActive(panelName.Equals(RoomListPanel.name)); //InsideRoomPanel
         InsideRoomPanel.SetActive(panelName.Equals(InsideRoomPanel.name));
-
-
     }
     #endregion
 }
